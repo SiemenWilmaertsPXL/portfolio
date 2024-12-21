@@ -3,65 +3,312 @@
     padding: 0;
     box-sizing: border-box;
 }
+.light{
+    --primarycolor: #15B6FF;
+    --secondarycolor: #f2f2f2;
+    --tertiarycolor: #000000;
+    --quaternarycolor:#154C67;
+    --quinarycolor: rgba(21,76,121,0.2);
+    --sextarycolor:#154C67;
+}
+.dark{
+    --primarycolor:rgba(52,63,81,0.2);
+    --secondarycolor:#343f51;
+    --tertiarycolor: #f2f2f2;
+    --quaternarycolor: black;
+    --quinarycolor: rgba(255,255,255,0.2);
+    --sextarycolor: none;
+}
 body{
+    font-family: Calibri,sans-serif;
     display: grid;
-    grid-template-columns: 2fr;
-    grid-template-rows: 1fr auto 2fr auto;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: auto auto 2fr auto;
     grid-template-areas:    "header header header"
                             "nav nav nav"
                             "main main main"
                             "footer footer footer";
-
-    background-color: #000000;
-    color: lawngreen;
+    background-color: var(--quaternarycolor);
+    color: var(--quaternarycolor);
 }
+.fa-lightbulb{
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    color: var(--tertiarycolor);
+}
+.fa-lightbulb:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
 header{
+    background-color: var(--quaternarycolor);
+    color: white;
     grid-area: header;
     display: flex;
     justify-content: space-between;
-    gap:3rem;
     margin: 0 auto;
-    max-width: 75rem;
+    max-width: 80rem;
+    width: 100%;
+
+}
+header a{
+    margin: 0 2rem;
+    width: 30%
 }
 header img{
-    width:20%;
+    width: 80%;
 }
 header img:hover{
- box-shadow: 10px 10px 10px lawngreen;
+ box-shadow: 10px 10px 10px var(--tertiarycolor);
 }
 header img:active{
-    border: 3px solid lawngreen;
+    border: 3px solid var(--tertiarycolor);
     box-shadow: none;
 }
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
+.fade-in-zoom {
+    animation: fadeInZoom 1.5s ease-in-out;
+}
 header .titel_container{
     align-self: center;
     font-size: 3rem;
-    max-width:80%
-
+    width: 70%;
+    margin: 3rem;
 }
 nav{
-    min-width: 75rem;
     grid-area: nav;
-    background-color: lawngreen;
-    color: #000000;
-    margin: 0 auto;
+    background-color: var(--quaternarycolor);
+    color: var(--tertiarycolor);
+}
+.nav_container_flex{
+        margin: 0 auto;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 nav ul{
-
     display: flex;
     justify-content: flex-end;
-
     gap: 2rem;
     list-style-type: none;
 }
 nav ul a{
     text-decoration: none;
-    color: #000000;
+    color:white;
+}
+nav li {
+    padding:1rem;
+    font-size: 1.5rem;
+}
+nav a:hover,.active_link{
+    background-color: var(--secondarycolor);
+    color: var(--quaternarycolor);
 }
 
 main{
+    display: grid;
+    background-color: var(--quinarycolor);
+    color: var(--quaternarycolor);
+    max-width:80rem;
     grid-area: main;
-    min-height: 50vh;
+    margin: 0 auto;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:"profiel info"
+                        "studies talen"
+                        "werk werk"
+}
+main section{
+    background-color: var(--secondarycolor);
+    margin: 2rem;
+}
+main .profiel{
+    grid-area: profiel;
+    padding: 1rem;
+    border-radius: 10px;
+}
+main .profiel h2{
+    font-size: 3rem;
+    text-align: center;
+}
+main .profiel p{
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5rem 2rem;
+}
+main .info{
+    grid-area: info;
+}
+main .info, main .talen{
+    padding: 1rem;
+    background-color: var(--secondarycolor);
+    border-radius: 10px;
+}
+main .info h2{
+    text-align: center;
+}
+main .info p{
+    text-align: center;
+    margin: 1rem 0;
+
+}
+main .studies{
+    grid-area: studies;
+    background-color: var(--sextarycolor);
+}
+main .studies table {
+
+    background-color: var(--secondarycolor);
+    height: 10vh;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+.studies_mobile{
+
+    display: none;
+}
+main table td , main table th{
+    border:1px solid var(--quaternarycolor);
+    padding:1rem;
+
+}
+main table tbody tr:nth-child(odd) td{
+    background-color: var(--quinarycolor);
+}
+main .talen{
+    grid-area: talen;
+}
+main .talen ul{
+    list-style-position: outside;
+    padding: 1rem;
+}
+
+.accordion{
+    grid-area: werk;
+
+    background-color: var(--sextarycolor);
+}
+.accordion_btn {
+    background-color: var(--secondarycolor);
+    color: var(--quaternarycolor);
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1rem;
+    border-top: 1px solid var(--quaternarycolor);
+    border-bottom: 1px solid var(--quaternarycolor);
+}
+.accordion_btn.active, .accordion_btn:hover {
+    background-color: var(--secondarycolor);
+    color: var(--tertiarycolor);
+}
+.accordion_btn.active  {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.accordion_content {
+    display: none;
+    padding: 10px;
+    background-color: var(--secondarycolor);
+    border-top: 1px solid var(--quaternarycolor);
+    border-bottom: 1px solid var(--quaternarycolor);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+main div ul {
+    padding: 0.5rem 3rem;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-out;
+}
+footer{
+    background-color:var(--secondarycolor);
+    color: var(--quaternarycolor);
+    grid-area: footer;
+}
+footer ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+footer ul a {
+    text-decoration: none;
+    color: var(--quaternarycolor);
+}
+
+@media screen and (max-width: 992px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    header a {
+        width: 70%;
+        margin: 0;
+        text-align: center;
+    }
+    header .titel_container{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav_container_flex{
+        padding:1rem;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap:1rem;
+        list-style-type: none;
+    }
+    main {
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas: "profiel"
+                             "info"
+                             "studies"
+                             "talen"
+                             "werk"
+
+    }
+    .studies{
+        display:none;
+    }
+    .studies_mobile{
+        grid-area: studies;
+        display:block;
+        border-radius: 5px;
+        padding: 1rem;
+        list-style-position: inside;
+
+    }
 }

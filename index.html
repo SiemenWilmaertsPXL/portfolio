@@ -3,29 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7cf717a6ca.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
     <title>CV Siemen Wilmaerts</title>
+
 </head>
-<body>
+<body class="light">
 <header>
-    <img src="assets/HeadshotSiemenWilmaerts.jpg" alt="Siemen Wilmaerts">
-    <div class="titel_container">
+    <a href="https://www.linkedin.com/in/siemen-wilmaerts/" target="_blank"><img src="assets/HeadshotSiemenWilmaerts.jpg" alt="Siemen Wilmaerts" class="fade-in-zoom"></a>
+    <div class="titel_container slide-in" >
         <h1>Siemen Wilmaerts</h1>
     </div>
 </header>
-<nav>
-    <ul>
-        <a href="#"><li>Home</li></a>
-        <a href="#"><li>CV</li></a>
+<nav class="slide-in">
+    <ul class="nav_container_flex">
+        <a href="#" class="active_link"><li>CV</li></a>
         <a href="#"><li>Portfolio</li></a>
-        <a href="#"><li>Test</li></a>
+        <a href="https://www.linkedin.com/in/siemen-wilmaerts/" target="_blank"><li>LinkedIn</li></a>
     </ul>
 </nav>
 <main>
+    <i class="fa-regular fa-lightbulb" onclick="toggleMode()"></i>
+    <section class="profiel slide-in">
+    <h2>Wie ben ik?</h2>
+    <p>Ik ben Siemen, 26jaar. Ik ben een sportieve, vriendelijke, spontane jongeman die altijd wil bijleren.
+        Ik zou mezelf omschrijven als een goede teamplayer door mijn extravert en meewerkend karakter.
+        Ik ben vaak een aanspreekpunt voor vragen in mijn omgeving.
+        Sinds jongs af aan heb ik te maken gehad met informatica door mijn vader.
+        Nu hoop ik deze kennis te verbreden.
+    </p>
+    </section>
+    <section class="info slide-in">
+        <h2>Info</h2>
+        <p>Geboortedatum: 29/09/1998 <br>
+            Nationaliteit: Belg <br>
+            Geslacht: Man <br>
+            GSM: +32496398613 <br>
+            E-mail:Siemen19981@hotmail.com
+        </p>
+    </section>
+    <section class="studies slide-in">
+        <table>
+            <tbody>
+            <th>Studie</th>
+            <th>Onderwijsinstelling</th>
+            <tr>
+                <td>Graduaat in het programmeren</td>
+                <td>PXL HASSELT</td>
 
+            </tr>
+            <tr>
+                <td>Prof. bach. Bedrijfsmanagement: Accountancy-fiscaliteit (diploma niet behaald)</td>
+                <td>PXL HASSELT</td>
+            </tr>
+            <tr>
+                <td>Prof. bach. Toegepaste informatica: Systemen en netwerkbeheer (diploma niet behaald)</td>
+                <td>PXL HASSELT</td>
+            </tr>
+            <tr>
+                <td>Diploma TSO 3de graad Secundair onderwijs Informaticabeheer</td>
+                <td>GO| technisch atheneum 1 Hasselt</td>
+            </tr>
+            <tr>
+                <td>Getuigschrift ASO 2de graad Secundair onderwijs Economie</td>
+                <td>Virga Jessecollege</td>
+            </tr>
+            <tr>
+                <td>Getuigschrift A 1ste graad Secundair onderwijs Moderne wetenschappen</td>
+                <td>Virga Jessecollege - eerste graad 2</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="studies_mobile slide-in">
+        <h2>Studies</h2>
+        <ul>
+            <li>Graduaat in het programmeren @ PXL HASSELT</li>
+            <li>Prof. bach. Bedrijfsmanagement: Accountancy-fiscaliteit (diploma niet behaald) @ PXL HASSELT</li>
+            <li>Prof. bach. Toegepaste informatica: Systemen en netwerkbeheer (diploma niet behaald) @ PXL HASSELT</li>
+            <li>Diploma TSO 3de graad Secundair onderwijs Informaticabeheer @ GO| technisch atheneum 1 Hasselt</li>
+            <li>Getuigschrift ASO 2de graad Secundair onderwijs Economie @ Virga Jessecollege</li>
+            <li>Getuigschrift A 1ste graad Secundair onderwijs Moderne wetenschappen @ Virga Jessecollege - eerste graad 2</li>
+        </ul>
+    </section>
+    <section class="talen slide-in">
+        <h2>Talen</h2>
+        <ul>
+            <li>Nederlands: Moedertaal</li>
+            <li>Engels: Uitstekend</li>
+            <li>Frans: Basis</li>
+            <li>Duits: Minimaal</li>
+        </ul>
+        <h2>Programmeer talen</h2>
+        <ul>
+        <li>C#: Basis</li>
+        <li>HTML: Basis</li>
+        <li>CSS: Basis</li>
+        <li>Javascript: Minimaal</li>
+        <li>SQL: Goed</li>
+        </ul>
+        <h2>Soft Skills (Thalento assesment)</h2>
+        <ul>
+            <li>Denken: Pragmaticus 75%</li>
+            <li>Doen: Resultaatgericht 83%</li>
+            <li>Communiceren: Extravert 89%</li>
+            <li>Samenwerken: Meewerkend 75%</li>
+        </ul>
+    </section>
+    <section class="accordion slide-in">
+        <button class="accordion_btn" >Connectivity and Software Validation Fleet Tester @ Ford Lommel Proving Grounds</button>
+        <div class="accordion_content">
+            <p>11-2021 tot 10-2023</p>
+            <h4>Taken:</h4>
+            <ul>
+                <li>Functioneel testen van auto software</li>
+                <li>Klantengebruik van de wagen nabootsen</li>
+                <li>Problemen melden via tickets in Jira</li>
+                <li>Mapping van wegen in UK gedaan voor een project rondom autonoom rijden</li>
+            </ul>
+        </div>
+            <button class="accordion_btn">Student: Kassamedewerker @ Spar Express Dusart Hasselt/Schiervel Hasselt</button>
+            <div class="accordion_content">
+                <p>10-2016 tot 03-2021</p>
+                <h4>Taken:</h4>
+                <ul>
+                    <li>Verantwoordelijk voor de kassa</li>
+                    <li>Rekken bijvullen</li>
+                    <li>Bestellingen aannemen</li>
+                    <li>Bestellingen aanvragen</li>
+                </ul>
+            </div>
+        <button class="accordion_btn">Student: Kassamedewerker @ Dagbladhandel Haesevoets</button>
+        <div class="accordion_content">
+            <p>08-2016 tot 08-2016</p>
+            <h4>Taken:</h4>
+            <ul>
+                <li>Verantwoordelijk voor de kassa</li>
+                <li>Rekken bijvullen</li>
+                <li>Bestellingen aannemen</li>
+                <li>aanvragen</li>
+            </ul>
+        </div>
+
+    </section>
 </main>
 <footer>
-
+<ul>
+    <li>Siemen Wilmaerts 1PRO-D</li>
+    <li>Opdracht curriculum vitae</li>
+    <a href="#"><li>Terug naar boven</li></a>
+</ul>
 </footer>
+<script src="index.js"></script>
 </body>
 </html>
