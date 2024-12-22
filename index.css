@@ -316,4 +316,9 @@ footer ul a {
     body{
         margin-left: 0;
         margin-right: 0;
-    }}
+    }
+    header .titel_container{
+        font-size: 2rem;
+        width: 70%;
+    }
+}
