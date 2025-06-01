@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const toggleButton = document.getElementById("themeToggle");
 
-    // === Theme Toggle Logic ===
+
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         body.className = savedTheme;
@@ -22,19 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleButton.textContent = theme === "dark" ? "☀️ Lichte modus" : "🌙 Donkere modus";
     }
 
-    // === WPL Toggle Logic ===
+
     const toggles = document.querySelectorAll(".wplToggle");
 
     toggles.forEach(toggle => {
         const container = toggle.parentElement;
         const children = Array.from(container.children).filter(child => child !== toggle);
 
-        // Hide all content by default
+
         children.forEach(child => {
             child.style.display = "none";
         });
 
-        // Toggle visibility on click
+
         toggle.addEventListener("click", () => {
             children.forEach(child => {
                 child.style.display = child.style.display === "none" ? "block" : "none";
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // === Section Reveal Animation ===
+
     const observer = new IntersectionObserver(
         (entries, observer) => {
             entries.forEach(entry => {

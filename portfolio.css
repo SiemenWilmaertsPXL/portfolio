@@ -1,90 +1,4 @@
-/** {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.light{
-    --primarycolor: #15B6FF;
-    --secondarycolor: #f2f2f2;
-    --tertiarycolor: #000000;
-    --quaternarycolor:#154C67;
-    --quinarycolor: rgba(21,76,121,0.2);
-    --sextarycolor:#154C67;
-}
-.dark{
-    --primarycolor:rgba(52,63,81,0.2);
-    --secondarycolor:#343f51;
-    --tertiarycolor: #f2f2f2;
-    --quaternarycolor: black;
-    --quinarycolor: rgba(255,255,255,0.2);
-    --sextarycolor: none;
-}
-nav{
-    grid-area: nav;
-    background-color: var(--quaternarycolor);
-    color: var(--tertiarycolor);
-}
-.nav_container_flex{
-    margin: 0 auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-nav ul{
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    list-style-type: none;
-}
-nav ul a{
-    text-decoration: none;
-    color:white;
-}
-nav li {
-    padding:1rem;
-    font-size: 1.5rem;
-}
-nav a:hover,.active_link{
-    background-color: var(--secondarycolor);
-    color: var(--quaternarycolor);
-}
-body{
-    padding: 0 0.5rem;
-    margin: 1rem auto;
-    background-color: var(--quaternarycolor);
-    color: white;
-}
-.logboek table{
-    border-collapse: collapse;
-    padding: 0 0.5rem;
-}
-.logboek table td, .logboek table th{
-    border:1px solid black;
-    padding:0.5rem;
-}
-.opdrachten{
-    border: 1px solid black;
-    padding: 0 0.5rem;
-}
-p,h2,h3,h4,h5,h6,dl,table,img{
-    padding:0 0.5rem;
-    margin:1rem;
-}
-section{
-    background-color: var(--secondarycolor);
-    color: var(--quaternarycolor);
-}
-.wpl-container > *:not(:first-child) {
-    display: none;
-}
-.wplToggle {
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}*/
-/* --- General Reset & Theme Colors --- */
 * {
     margin: 0;
     padding: 0;
@@ -109,7 +23,7 @@ section{
     --sextarycolor: none;
 }
 
-/* --- Layout --- */
+
 body {
     padding: 0 0.5rem;
     margin: 1rem auto;
@@ -117,7 +31,7 @@ body {
     color: white;
 }
 
-/* --- Navigation --- */
+
 nav {
     grid-area: nav;
     background-color: var(--quaternarycolor);
@@ -160,7 +74,7 @@ nav li:hover {
     cursor: pointer;
 }
 
-/* --- Sections & Content --- */
+
 section {
     background-color: var(--secondarycolor);
     color: var(--quaternarycolor);
@@ -178,7 +92,7 @@ section h2 {
     border-radius: 5px;
 }
 
-/* --- Tables --- */
+
 .logboek table {
     width: 100%;
     margin-bottom: 2rem;
@@ -202,7 +116,7 @@ section h2 {
     border: 1px solid #ddd;
 }
 
-/* --- Individual Reflection (PDF preview) --- */
+
 .individuele_eindreflectie a {
     display: flex;
     gap: 1rem;
@@ -224,7 +138,7 @@ section h2 {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Typography & Padding --- */
+
 p,
 h2,
 h3,
@@ -238,7 +152,7 @@ img {
     margin: 1rem;
 }
 
-/* --- Toggle Sections (WPL) --- */
+
 .wpl-container > *:not(:first-child) {
     display: none;
 }
